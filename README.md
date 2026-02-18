@@ -138,7 +138,7 @@ This project is tested and verified on **Python 3.10.11**.
 
 Some libraries used in this project, particularly **InsightFace**, **ONNX Runtime**, and their underlying dependencies, may not be fully compatible with newer Python versions at the time of development.
 
-Using **Python 3.11 or higher** may result in:
+Using **Python 3.10.11 or higher** may result in:
 - Installation failures for `insightface` or `onnxruntime`
 - Runtime errors related to model loading or inference
 - Compatibility issues with compiled dependencies
