@@ -68,7 +68,7 @@ The system is built on a clear separation of concerns:
 - The identity and inferred location are displayed in real time on the webcam feed.
 
 # Project Structure
-```shell
+```
 face-based-location-prediction-system/
 │
 ├── data/                            # Runtime data (ignored in .gitignore)
@@ -119,7 +119,7 @@ Each row represents **one frequent place for one person**, defined by time and d
 | `weight`     | Relative frequency (not probability)     |
 
 ### Example:
-```csv
+```
 aniket_dixit,College Campus,education,Mon|Tue|Wed|Thu|Fri,09:00,16:00,0.6
 ```
 
@@ -151,32 +151,32 @@ Using a Python version other than the recommended one may lead to unexpected beh
 
 # How to run
 ## Step 1: Clone the repository
-```bash
+```
 git clone https://github.com/aniketrepo/face-based-location-prediction-system.git
 cd face-based-location-prediction-system
 ```
 
 ## Step 2: Create and activate a virtual environment
 ### Windows
-```bash
+```
 python -m venv venv
 venv\Scripts\activate
 ```
 
 ### Linux/MacOS
-```python
+```
 python3 -m venv venv
 source venv/bin/activate
 ```
 
 ## Step 3: Install dependencies
-```python
+```
 pip install -r requirements.txt
 ```
 
 ## Step 4: Set up the data directory
 Create the following structure manually (this directory is ignored in Git):
-```shell
+```
 data/
 ├── raw_faces/
 ├── embeddings/
@@ -188,7 +188,7 @@ data/
 - Organize images by identity (one folder per person)
 
 Example:
-```shell
+```
 data/raw_faces/
 ├── face_1/
 ├── face_2/
@@ -197,18 +197,18 @@ data/raw_faces/
 
 ## Step 6: Generate face embeddings
 Run the embedding generation script:
-```python
+```
 python build_embeddings.py
 ```
 
 This will create one `.npy` embedding file per identity inside:
-```shell
+```
 data/embeddings/
 ```
 
 ## Step 7: Configure spatiotemporal behavior
 Edit the file:
-```shell
+```
 data/mobility/identity_mobility.csv
 ```
 Ensure:
@@ -216,7 +216,7 @@ Ensure:
 - Days and time ranges are correctly defined
 
 ## Step 8: Run the real-time system
-```python
+```
 python webcam_recognition.py
 ```
 
